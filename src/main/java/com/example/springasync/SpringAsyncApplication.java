@@ -2,7 +2,6 @@ package com.example.springasync;
 
 import com.example.springasync.entities.Ingredient;
 import com.example.springasync.repositories.IngredientRepository;
-import com.example.springasync.repositories.TacoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,7 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Arrays;
-import java.util.List;
 
 @Slf4j
 @SpringBootApplication
@@ -23,9 +21,9 @@ public class SpringAsyncApplication {
 
     @Bean
     @ConditionalOnProperty(prefix = "spring.datasource", value = "init", havingValue = "true")
-    public ApplicationRunner getApplicationRunner(IngredientRepository ingredientRepository, TacoRepository tacoRepository) {
+    public ApplicationRunner getApplicationRunner(IngredientRepository ingredientRepository) {
         return args -> {
-            List<Ingredient> ingredients = ingredientRepository.saveAll(Arrays.asList(new Ingredient("FLTO", "Flour Tortilla", Ingredient.Type.WRAP),
+            ingredientRepository.saveAll(Arrays.asList(new Ingredient("FLTO", "Flour Tortilla", Ingredient.Type.WRAP),
                     new Ingredient("COTO", "Corn Tortilla", Ingredient.Type.WRAP),
                     new Ingredient("GRBF", "Ground Beef", Ingredient.Type.PROTEIN),
                     new Ingredient("CARN", "Carnitas", Ingredient.Type.PROTEIN),
