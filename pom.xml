@@ -19,6 +19,13 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< HEAD
+=======
+            <artifactId>spring-boot-starter-artemis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+>>>>>>> 9b5fb39c8c20d0040d39cdedc5b829a47d0d9e22
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
@@ -54,6 +61,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-hateoas</artifactId>
@@ -66,6 +74,8 @@
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
+=======
+>>>>>>> 9b5fb39c8c20d0040d39cdedc5b829a47d0d9e22
     </dependencies>
 
     <build>
