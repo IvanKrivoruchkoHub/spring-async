@@ -3,7 +3,6 @@ package com.example.springasync.sevices;
 import com.example.springasync.entities.Taco;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.hibernate.mapping.TableOwner;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.KafkaHeaders;
