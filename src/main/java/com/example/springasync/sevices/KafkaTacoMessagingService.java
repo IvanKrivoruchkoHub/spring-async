@@ -3,7 +3,6 @@ package com.example.springasync.sevices;
 import com.example.springasync.entities.Taco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service

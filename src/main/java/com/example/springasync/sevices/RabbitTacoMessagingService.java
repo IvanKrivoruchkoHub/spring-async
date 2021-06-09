@@ -1,8 +1,6 @@
 package com.example.springasync.sevices;
 
 import com.example.springasync.entities.Taco;
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.stereotype.Service;

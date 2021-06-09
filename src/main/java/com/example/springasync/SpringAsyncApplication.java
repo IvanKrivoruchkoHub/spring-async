@@ -8,7 +8,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
+import reactor.util.Logger;
 
+import java.time.Duration;
 import java.util.Arrays;
 
 @Slf4j
@@ -17,6 +22,43 @@ public class SpringAsyncApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringAsyncApplication.class, args);
+//        Flux<String> flux = Flux.just("Apple", "Orange", "Grape", "Banana", "Strawberry", "");
+//        flux.buffer(4).subscribe(e -> log.info("{}", e));
+//        flux.filter(s -> !s.isEmpty()).log().flatMap(m -> {
+//            return Mono.just(m).subscribeOn(Schedulers.parallel());
+//        }).subscribe(e -> log.info("{}", e));
+//        flux.delaySubscription(Duration.ofSeconds(1)).delayElements(Duration.ofMillis(1000)).log().subscribe(e -> log.info("{}", e));
+//        Flux<String> flux = Flux.just("Apple", "Apple", "Grape", "Apple", "Strawberry");
+//        flux.buffer(2).subscribe(System.out::println);
+//        Flux.just(
+//                "apple", "orange", "banana", "kiwi", "strawberry")
+//                .buffer(3)
+//                .flatMap(x ->
+//                        Flux.fromIterable(x)
+//                                .map(String::toUpperCase)
+//                                .subscribeOn(Schedulers.parallel())
+//                                .log()
+//                )
+//                .subscribe();
+//        Flux.just(
+//                "apple", "orange", "banana", "kiwi", "strawberry")
+//                .map(m -> m.substring(0, 2))
+//                .log()
+//                .buffer(3)
+//                .flatMap(x ->
+//                        Flux.fromIterable(x)
+//                                .map(String::toUpperCase)
+//                                .subscribeOn(Schedulers.parallel())
+//                                .log()
+//                ).subscribe();
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//        Flux<String> flux2 = Flux.range(0, 4).map(Object::toString);
+//        Flux.firstWithSignal(flux, flux2).subscribe(s -> log.info("{}", s));
+//        flux.mergeWith(flux2).log().subscribe(s -> log.info("{}", s));
     }
 
     @Bean
